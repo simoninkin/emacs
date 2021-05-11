@@ -70,8 +70,8 @@
 (setq-default explicit-shell-file-name "/bin/bash")
 
 ;; macOS
-;; (setq mac-option-modifier 'meta)
-;; (setq mac-control-modifier 'control)
+(setq mac-option-modifier 'meta)
+(setq mac-control-modifier 'control)
 
 ;; (setq  x-meta-keysym 'super
 ;;        x-super-keysym 'meta)
@@ -124,7 +124,7 @@ There are two things you can do about this warning:
 ;;(setq default-frame-alist '((font . "Source Code Pro-8")))
 ;;(set-default-font "Monaco 11")
 ;;(set-face-attribute 'default nil :font "DejaVu Sans Mono-10" )
-(set-face-attribute 'default nil :font "Office Code Pro-10" )
+(set-face-attribute 'default nil :font "Office Code Pro-13" )
 
 
 ;; themes
@@ -206,12 +206,12 @@ There are two things you can do about this warning:
 ;;(custom-set-variables
 ;; '(tramp-default-method "ssh")
 ;; '(tramp-default-user "si")
-;; '(tramp-default-host "devdevdev.yourawesomedomainname.com"))
+;; '(tramp-default-host "devdevdev.yourawesomefqdn.com"))
 
 (customize-set-variable 'tramp-encoding-shell "/bin/bash")
 
 (add-to-list 'tramp-connection-properties
-  (list (regexp-quote "/ssh:si@elixir.yourawesomedomainname.com:")
+  (list (regexp-quote "/ssh:si@elixir.yourawesomefqdn.com:")
         "remote-shell" "/bin/bash"))
 
 
@@ -405,7 +405,7 @@ There are two things you can do about this warning:
     (python-mode . lsp)
     (elixir-mode . lsp)
     :init
-;;    (add-to-list 'exec-path "/ssh:si@elixir.yourawesomedomainname.com:/home/si/elixir/elixir-ls/release"))
+;;    (add-to-list 'exec-path "/ssh:si@elixir.yourawesomefqdn.com:/home/si/elixir/elixir-ls/release"))
 ;;;;    (add-to-list 'exec-path "/Users/simon/elixir/elixir/elixir-ls/release"))
     ;;      (add-to-list 'exec-path "/Users/simon/elixir-ls-master/release"))
     ;;(add-to-list 'lsp-file-watch-ignored "[/\\\\]assets\\'")
